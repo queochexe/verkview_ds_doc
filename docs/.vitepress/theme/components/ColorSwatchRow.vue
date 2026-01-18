@@ -39,38 +39,44 @@ const copyToClipboard = async () => {
 <style scoped>
 .color-row {
   @apply flex items-center gap-4 py-3 px-4 rounded-lg cursor-pointer transition-all;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--vp-c-bg-soft);
 }
 
 .color-row:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--vp-c-bg-elv);
 }
 
 .color-swatch {
   @apply w-16 h-10 rounded-md flex-shrink-0;
+  border: 1px solid var(--vp-c-border);
 }
 
 .swatch-border {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--vp-c-border);
 }
 
 .color-name {
-  @apply w-24 text-sm font-medium text-zinc-200;
+  @apply w-24 text-sm font-medium;
+  color: var(--vp-c-text-1);
 }
 
 .color-hex {
-  @apply w-20 text-sm font-mono text-zinc-400 uppercase;
+  @apply w-20 text-sm font-mono uppercase;
+  color: var(--vp-c-text-2);
 }
 
 .color-variable {
-  @apply flex-1 text-sm font-mono text-zinc-500;
+  @apply flex-1 text-sm font-mono;
+  color: var(--vp-c-text-3);
 }
 
 .color-contrast {
-  @apply w-16 text-sm text-zinc-500 text-right;
+  @apply w-16 text-sm text-right;
+  color: var(--vp-c-text-3);
 }
 
 .copy-indicator {
   @apply w-8 flex justify-center;
+  color: var(--vp-c-text-3);
 }
 </style>

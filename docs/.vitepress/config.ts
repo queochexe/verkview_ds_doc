@@ -38,6 +38,7 @@ export default defineConfig({
             { text: 'Tables', link: '/components/tables' },
             { text: 'Navigation', link: '/components/navigation' },
             { text: 'Cards', link: '/components/cards' },
+            { text: 'Modals & Dialogs', link: '/components/modal' },
             { text: 'Avatars', link: '/components/avatars' },
             { text: 'Icons', link: '/components/icons' }
           ]

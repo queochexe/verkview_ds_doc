@@ -40,14 +40,13 @@ const iconColor = computed(() => {
 <style scoped>
 .feature-card {
   @apply p-6 rounded-xl;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
   transition: all 0.3s ease;
 }
 
 .feature-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--vp-c-brand-1);
   transform: translateY(-4px);
 }
 
@@ -58,10 +57,12 @@ const iconColor = computed(() => {
 }
 
 .feature-title {
-  @apply text-lg font-semibold text-zinc-100 mb-2;
+  @apply text-lg font-semibold mb-2;
+  color: var(--vp-c-text-1);
 }
 
 .feature-description {
-  @apply text-sm text-zinc-400 leading-relaxed;
+  @apply text-sm leading-relaxed;
+  color: var(--vp-c-text-2);
 }
 </style>

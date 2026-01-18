@@ -23,17 +23,16 @@ defineProps<{
 <style scoped>
 .component-card {
   @apply flex items-center justify-between p-4 rounded-lg transition-all;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
 }
 
 .component-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(139, 92, 246, 0.3);
+  border-color: var(--vp-c-brand-1);
 }
 
 .component-card:hover .card-arrow {
-  color: #8b5cf6;
+  color: var(--vp-c-brand-1);
   transform: translateX(4px);
 }
 
@@ -42,14 +41,17 @@ defineProps<{
 }
 
 .card-title {
-  @apply text-base font-medium text-zinc-200;
+  @apply text-base font-medium;
+  color: var(--vp-c-text-1);
 }
 
 .card-count {
-  @apply text-sm text-zinc-500;
+  @apply text-sm;
+  color: var(--vp-c-text-3);
 }
 
 .card-arrow {
-  @apply text-zinc-600 transition-all;
+  @apply transition-all;
+  color: var(--vp-c-text-3);
 }
 </style>

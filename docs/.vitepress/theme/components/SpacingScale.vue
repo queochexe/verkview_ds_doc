@@ -40,8 +40,8 @@ const spacingItems = [
   @apply flex flex-col items-center justify-end p-3 rounded-lg;
   min-width: 70px;
   min-height: 100px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
 }
 
 .spacing-box {
@@ -52,10 +52,12 @@ const spacingItems = [
 }
 
 .spacing-name {
-  @apply text-xs font-mono text-zinc-400 mb-0.5;
+  @apply text-xs font-mono mb-0.5;
+  color: var(--vp-c-text-2);
 }
 
 .spacing-value {
-  @apply text-xs text-zinc-600;
+  @apply text-xs;
+  color: var(--vp-c-text-3);
 }
 </style>

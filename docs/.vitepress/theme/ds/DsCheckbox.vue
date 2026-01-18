@@ -3,7 +3,7 @@
     <input
       :id="checkboxId"
       type="checkbox"
-      class="custom-checkbox w-4 h-4 rounded border-zinc-700 bg-zinc-900 text-zinc-100 focus:ring-zinc-700 focus:ring-offset-zinc-950"
+      class="custom-checkbox"
       :checked="modelValue"
       :disabled="disabled"
       :aria-checked="modelValue"

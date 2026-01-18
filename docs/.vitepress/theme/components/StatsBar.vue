@@ -34,7 +34,8 @@
 }
 
 .stat-value {
-  @apply text-2xl md:text-3xl font-bold text-zinc-100 mb-1;
+  @apply text-2xl md:text-3xl font-bold mb-1;
+  color: var(--vp-c-text-1);
 }
 
 .stat-value.highlight {
@@ -46,6 +47,7 @@
 }
 
 .stat-label {
-  @apply text-xs md:text-sm text-zinc-500;
+  @apply text-xs md:text-sm;
+  color: var(--vp-c-text-2);
 }
 </style>

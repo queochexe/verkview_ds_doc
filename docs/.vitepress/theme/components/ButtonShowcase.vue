@@ -166,11 +166,13 @@ const simulateLoading = () => {
 }
 
 .section-title {
-  @apply text-xl font-semibold text-zinc-100;
+  @apply text-xl font-semibold;
+  color: var(--vp-c-text-1);
 }
 
 .section-description {
-  @apply text-sm text-zinc-400;
+  @apply text-sm;
+  color: var(--vp-c-text-2);
 }
 
 .button-row {
@@ -205,24 +207,25 @@ const simulateLoading = () => {
 
 /* Secondary */
 .btn-secondary {
-  @apply text-zinc-200;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
 }
 .btn-secondary:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--vp-c-bg-elv);
+  border-color: var(--vp-c-brand-1);
 }
 .btn-secondary:focus { @apply ring-zinc-500; }
 
 /* Ghost */
 .btn-ghost {
-  @apply text-zinc-300;
+  color: var(--vp-c-text-2);
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--vp-c-border);
 }
 .btn-ghost:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
 }
 .btn-ghost:focus { @apply ring-zinc-500; }
 
@@ -289,8 +292,8 @@ const simulateLoading = () => {
 /* States Grid */
 .states-grid {
   @apply grid md:grid-cols-2 gap-6 p-6 rounded-xl;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
 }
 
 .state-group {
@@ -298,7 +301,8 @@ const simulateLoading = () => {
 }
 
 .state-label {
-  @apply text-sm text-zinc-500;
+  @apply text-sm;
+  color: var(--vp-c-text-2);
 }
 
 .state-buttons {
@@ -320,7 +324,8 @@ const simulateLoading = () => {
 }
 
 .group-label {
-  @apply text-sm text-zinc-500;
+  @apply text-sm;
+  color: var(--vp-c-text-2);
 }
 
 .btn-group-h {
@@ -336,7 +341,7 @@ const simulateLoading = () => {
   @apply rounded-r-lg;
 }
 .btn-group-h .btn:not(:last-child) {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid var(--vp-c-border);
 }
 
 .btn-group-v {
@@ -352,6 +357,6 @@ const simulateLoading = () => {
   @apply rounded-b-lg;
 }
 .btn-group-v .btn:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--vp-c-border);
 }
 </style>

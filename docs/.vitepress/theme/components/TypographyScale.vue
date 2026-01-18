@@ -38,7 +38,8 @@ const typographyItems = [
 }
 
 .typography-item {
-  @apply py-4 border-b border-zinc-800/50;
+  @apply py-4;
+  border-bottom: 1px solid var(--vp-c-border);
 }
 
 .typography-item:last-child {
@@ -50,14 +51,16 @@ const typographyItems = [
 }
 
 .type-name {
-  @apply text-sm font-medium text-zinc-400;
+  @apply text-sm font-medium;
+  color: var(--vp-c-text-2);
 }
 
 .type-specs {
-  @apply text-xs font-mono text-zinc-600;
+  @apply text-xs font-mono;
+  color: var(--vp-c-text-3);
 }
 
 .type-sample {
-  @apply text-zinc-200;
+  color: var(--vp-c-text-1);
 }
 </style>

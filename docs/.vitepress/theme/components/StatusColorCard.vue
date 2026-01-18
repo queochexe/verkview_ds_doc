@@ -22,8 +22,8 @@ defineProps<{
 <style scoped>
 .status-card {
   @apply flex items-center justify-between p-4 rounded-xl;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
 }
 
 .status-pill {
@@ -35,10 +35,12 @@ defineProps<{
 }
 
 .status-hex {
-  @apply text-sm font-mono text-zinc-400 uppercase;
+  @apply text-sm font-mono uppercase;
+  color: var(--vp-c-text-2);
 }
 
 .status-contrast {
-  @apply text-xs text-zinc-500;
+  @apply text-xs;
+  color: var(--vp-c-text-3);
 }
 </style>

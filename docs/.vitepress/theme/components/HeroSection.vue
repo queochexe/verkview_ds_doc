@@ -41,7 +41,7 @@ import { ArrowRight, Github } from 'lucide-vue-next'
   @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6;
   background: rgba(34, 197, 94, 0.1);
   border: 1px solid rgba(34, 197, 94, 0.3);
-  color: #22c55e;
+  color: #16a34a;
 }
 
 .badge-dot {
@@ -51,19 +51,21 @@ import { ArrowRight, Github } from 'lucide-vue-next'
 }
 
 .hero-title {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-100 mb-5 leading-tight;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight;
+  color: var(--vp-c-text-1);
 }
 
 .gradient-text {
   @apply block mt-1;
-  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .hero-description {
-  @apply text-base md:text-lg text-zinc-400 max-w-2xl mx-auto mb-8 leading-relaxed;
+  @apply text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed;
+  color: var(--vp-c-text-2);
 }
 
 .hero-actions {
@@ -80,13 +82,14 @@ import { ArrowRight, Github } from 'lucide-vue-next'
 }
 
 .btn-secondary {
-  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium text-zinc-300 transition-all text-sm;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all text-sm;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-brand-1);
 }
 </style>
