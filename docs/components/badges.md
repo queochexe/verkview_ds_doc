@@ -111,6 +111,12 @@ Visual indicators for status, counts, and labels. All badges meet WCAG 2.1 Level
   </div>
 </div>
 
+## Token Mapping
+
+How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Badge" />
+
 ## Accessibility Guidelines
 
 <div class="a11y-section">

@@ -157,6 +157,12 @@ The toast animates in from the right and out to the right:
 }
 ```
 
+## Token Mapping
+
+How Toast tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Toast" />
+
 ## Accessibility
 
 ### ARIA Attributes

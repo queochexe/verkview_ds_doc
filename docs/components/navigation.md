@@ -137,6 +137,14 @@ Navigation components for site structure and user orientation. All navigation me
   </div>
 </div>
 
+## Token Mapping
+
+How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Sidebar" />
+
+<TokenMap component="Breadcrumbs" />
+
 ## Accessibility Guidelines
 
 <div class="a11y-section">

@@ -170,6 +170,12 @@ Data tables for displaying structured information. All tables meet WCAG 2.1 Leve
   </table>
 </div>
 
+## Token Mapping
+
+How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Table" />
+
 ## Accessibility Guidelines
 
 <div class="a11y-section">

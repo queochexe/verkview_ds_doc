@@ -171,6 +171,12 @@ const variant = getLabelVariant('#22c55e') // Returns 'success'
 | `#ec4899` | `purple` |
 | `#6b7280` | `default` |
 
+## Token Mapping
+
+How Badge tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Badge" />
+
 ## Accessibility
 
 ### ARIA Attributes

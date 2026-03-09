@@ -141,6 +141,12 @@ Bottom section with help and user profile:
 />
 ```
 
+## Token Mapping
+
+How Sidebar tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Sidebar" />
+
 ## Accessibility
 
 ### ARIA Attributes

@@ -154,6 +154,12 @@ Card with shadow for prominent content.
 </DsCard>
 ```
 
+## Token Mapping
+
+How Card tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Card" />
+
 ## Accessibility
 
 ### Keyboard Support

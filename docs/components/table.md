@@ -205,6 +205,12 @@ const columns = [
 </template>
 ```
 
+## Token Mapping
+
+How Table tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Table" />
+
 ## Accessibility
 
 ### ARIA Roles

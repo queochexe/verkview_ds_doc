@@ -169,6 +169,12 @@ const description = ref('')
 />
 ```
 
+## Token Mapping
+
+How Textarea tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Textarea" />
+
 ## Accessibility
 
 ### ARIA Attributes

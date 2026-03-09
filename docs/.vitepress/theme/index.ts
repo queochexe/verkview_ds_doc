@@ -24,6 +24,7 @@ import StatusColorCard from './components/StatusColorCard.vue'
 import TypographyScale from './components/TypographyScale.vue'
 import SpacingScale from './components/SpacingScale.vue'
 import ButtonShowcase from './components/ButtonShowcase.vue'
+import TokenMap from './components/TokenMap.vue'
 
 // Import Design System components
 import DsButton from './ds/DsButton.vue'
@@ -62,6 +63,7 @@ const theme: Theme = {
     app.component('TypographyScale', TypographyScale)
     app.component('SpacingScale', SpacingScale)
     app.component('ButtonShowcase', ButtonShowcase)
+    app.component('TokenMap', TokenMap)
 
     // Register Design System components for live demos
     app.component('DsButton', DsButton)

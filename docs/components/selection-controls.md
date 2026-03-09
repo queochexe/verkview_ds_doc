@@ -120,6 +120,12 @@ Checkboxes, radio buttons, and toggle switches for user selections. All controls
   </div>
 </div>
 
+## Token Mapping
+
+How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Checkbox" />
+
 ## Accessibility Guidelines
 
 <div class="a11y-section">

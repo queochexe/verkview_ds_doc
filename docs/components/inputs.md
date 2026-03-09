@@ -84,6 +84,14 @@ Text input fields for collecting user data. All inputs meet WCAG 2.1 Level AA wi
   </div>
 </div>
 
+## Token Mapping
+
+How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Input" />
+
+<TokenMap component="Textarea" />
+
 ## Accessibility Guidelines
 
 <div class="a11y-section">

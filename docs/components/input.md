@@ -234,6 +234,12 @@ const emailError = computed(() => {
 </template>
 ```
 
+## Token Mapping
+
+How Input tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Input" />
+
 ## Accessibility
 
 ### ARIA Attributes

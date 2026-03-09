@@ -113,6 +113,12 @@ Container components for grouping related content. All cards meet WCAG 2.1 Level
   </div>
 </div>
 
+## Token Mapping
+
+How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Card" />
+
 ## Accessibility Guidelines
 
 <div class="a11y-section">

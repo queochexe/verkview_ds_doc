@@ -130,6 +130,12 @@ Disable Escape key closing:
 </DsModal>
 ```
 
+## Token Mapping
+
+How Modal tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+
+<TokenMap component="Modal" />
+
 ## Accessibility
 
 ### ARIA Attributes
