@@ -86,7 +86,7 @@ Text input fields for collecting user data. All inputs meet WCAG 2.1 Level AA wi
 
 ## Token Mapping
 
-How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Input" />
 

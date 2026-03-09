@@ -143,7 +143,7 @@ Bottom section with help and user profile:
 
 ## Token Mapping
 
-How Sidebar tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Sidebar tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Sidebar" />
 

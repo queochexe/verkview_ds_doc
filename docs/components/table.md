@@ -207,7 +207,7 @@ const columns = [
 
 ## Token Mapping
 
-How Table tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Table tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Table" />
 

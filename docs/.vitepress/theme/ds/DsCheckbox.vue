@@ -15,7 +15,7 @@
     <label
       v-if="label"
       :for="checkboxId"
-      class="text-sm text-zinc-300 cursor-pointer select-none"
+      class="text-sm text-foreground/80 cursor-pointer select-none"
     >
       {{ label }}
     </label>

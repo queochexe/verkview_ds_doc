@@ -10,7 +10,7 @@ Interactive elements for actions and navigation. All buttons meet WCAG 2.1 Level
 
 ## Token Mapping
 
-How button tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How button tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Button" />
 

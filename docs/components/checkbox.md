@@ -107,7 +107,7 @@ When no visible label is needed, provide `aria-label`:
 
 ## Token Mapping
 
-How Checkbox tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Checkbox tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Checkbox" />
 

@@ -54,7 +54,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/verkview/design-system' }
+      { icon: 'github', link: 'https://github.com/queochexe/verkview_ds_doc' }
     ],
 
     search: {

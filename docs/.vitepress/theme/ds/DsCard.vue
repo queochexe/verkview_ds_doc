@@ -6,15 +6,15 @@
     @click="handleClick"
     @keydown="handleKeyDown"
   >
-    <h3 v-if="title" class="text-sm font-medium text-zinc-200 mb-2">
+    <h3 v-if="title" class="text-sm font-medium text-foreground mb-2">
       {{ title }}
     </h3>
-    <div class="text-xs text-zinc-400">
+    <div class="text-xs text-muted-foreground">
       <slot />
     </div>
     <div
       v-if="$slots.footer"
-      class="mt-3 pt-3 border-t border-zinc-800 flex items-center justify-between"
+      class="mt-3 pt-3 border-t border-border flex items-center justify-between"
     >
       <slot name="footer" />
     </div>
@@ -43,9 +43,9 @@ const emit = defineEmits<{
 const baseClasses = 'rounded-lg border transition-all p-3';
 
 const variantClasses = {
-  default: 'bg-zinc-900/40 border-zinc-800/60 hover:border-zinc-700/80 hover:bg-zinc-900/60',
-  interactive: 'bg-zinc-900/40 border-zinc-800/60 hover:border-zinc-700/80 hover:bg-zinc-900/60 cursor-pointer focus-within:ring-2 focus-within:ring-zinc-700',
-  elevated: 'bg-zinc-900 border-zinc-800 shadow-lg',
+  default: 'bg-card/40 border-border/60 hover:border-border/80 hover:bg-card/60',
+  interactive: 'bg-card/40 border-border/60 hover:border-border/80 hover:bg-card/60 cursor-pointer focus-within:ring-2 focus-within:ring-ring',
+  elevated: 'bg-card border-border shadow-lg',
 };
 
 const cardComponent = computed(() => {

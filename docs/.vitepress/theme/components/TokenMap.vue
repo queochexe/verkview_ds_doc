@@ -13,49 +13,34 @@
         </button>
       </div>
 
-      <!-- Token table -->
-      <div class="token-table-wrap">
-        <table class="token-table">
-          <thead>
-            <tr>
-              <th class="col-part">Part</th>
-              <th class="col-component">Component Token</th>
-              <th class="col-arrow"></th>
-              <th class="col-semantic">Semantic Token</th>
-              <th class="col-arrow"></th>
-              <th class="col-primitive">Primitive</th>
-              <th class="col-swatch">Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="token in currentTokens" :key="token.part">
-              <td class="col-part">{{ token.part }}</td>
-              <td class="col-component">
-                <code>{{ token.componentToken }}</code>
-              </td>
-              <td class="col-arrow">
-                <span class="arrow">&larr;</span>
-              </td>
-              <td class="col-semantic">
-                <code>{{ token.semanticToken }}</code>
-              </td>
-              <td class="col-arrow">
-                <span class="arrow">&larr;</span>
-              </td>
-              <td class="col-primitive">
-                <code>{{ token.primitiveToken }}</code>
-              </td>
-              <td class="col-swatch">
-                <span
-                  class="swatch"
-                  :style="{ background: token.primitiveValue }"
-                  :title="token.primitiveValue"
-                ></span>
-                <span class="hex">{{ token.primitiveValue }}</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- Token rows -->
+      <div class="token-rows">
+        <div v-for="token in currentTokens" :key="token.part" class="token-row">
+          <div class="token-part">{{ token.part }}</div>
+          <div class="token-chain">
+            <span class="hex-group">
+              <span
+                class="swatch"
+                :style="{ background: token.primitiveValue }"
+                :title="token.primitiveValue"
+              ></span>
+              <span class="hex">{{ token.primitiveValue }}</span>
+            </span>
+            <span class="arrow">&rarr;</span>
+            <code class="chip chip-primitive">{{ token.primitiveToken }}</code>
+            <span class="arrow">&rarr;</span>
+            <code class="chip chip-semantic">{{ token.semanticToken }}</code>
+            <span class="arrow">&rarr;</span>
+            <code class="chip chip-component">{{ token.componentToken }}</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="token-legend">
+        <span class="legend-item"><span class="legend-dot dot-primitive"></span>Primitive</span>
+        <span class="legend-item"><span class="legend-dot dot-semantic"></span>Semantic</span>
+        <span class="legend-item"><span class="legend-dot dot-component"></span>Component</span>
       </div>
     </div>
     <div v-else class="token-map-empty">
@@ -132,118 +117,121 @@ const currentTokens = computed(() => {
   border-bottom-color: var(--vp-c-brand-1, #3b82f6);
 }
 
-.token-table-wrap {
-  overflow-x: auto;
+.token-rows {
+  padding: 0.5rem 0;
 }
 
-.token-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.8125rem;
-  min-width: 700px;
-}
-
-.token-table thead {
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.token-table th {
-  padding: 0.625rem 0.75rem;
-  text-align: left;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  color: var(--vp-c-text-3);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.token-table td {
-  padding: 0.5rem 0.75rem;
+.token-row {
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  vertical-align: middle;
 }
 
-.token-table tr:last-child td {
+.token-row:last-child {
   border-bottom: none;
 }
 
-.token-table tr:hover td {
+.token-row:hover {
   background: rgba(255, 255, 255, 0.02);
 }
 
-.col-part {
-  color: var(--vp-c-text-2);
+.token-part {
+  font-size: 0.8125rem;
   font-weight: 500;
-  white-space: nowrap;
+  color: var(--vp-c-text-2);
+  margin-bottom: 0.375rem;
 }
 
-.col-component code,
-.col-semantic code,
-.col-primitive code {
-  font-size: 0.6875rem;
+.token-chain {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-size: 0.625rem;
   font-family: var(--vp-font-family-mono);
   padding: 0.125rem 0.375rem;
   border-radius: 0.25rem;
   white-space: nowrap;
 }
 
-.col-component code {
+.chip-component {
   background: rgba(139, 92, 246, 0.1);
   color: #a78bfa;
 }
 
-.col-semantic code {
+.chip-semantic {
   background: rgba(59, 130, 246, 0.1);
   color: #60a5fa;
 }
 
-.col-primitive code {
+.chip-primitive {
   background: rgba(34, 197, 94, 0.1);
   color: #4ade80;
 }
 
-.col-arrow {
-  width: 1.5rem;
-  text-align: center;
-  padding: 0 0.25rem !important;
-}
-
 .arrow {
   color: var(--vp-c-text-3);
-  font-size: 0.875rem;
-  opacity: 0.5;
+  font-size: 0.75rem;
+  opacity: 0.4;
+  flex-shrink: 0;
 }
 
-.col-swatch {
-  display: flex;
+.hex-group {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-/* Fix table cell flex */
-td.col-swatch {
-  display: table-cell;
-}
-
-td.col-swatch > * {
-  display: inline-block;
-  vertical-align: middle;
+  gap: 0.375rem;
+  margin-left: 0.25rem;
 }
 
 .swatch {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   flex-shrink: 0;
-  margin-right: 0.5rem;
 }
 
 .hex {
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   font-family: var(--vp-font-family-mono);
-  color: var(--vp-c-text-3);
+  color: var(--vp-c-text-2);
+}
+
+.token-legend {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.625rem;
+  color: var(--vp-c-text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.dot-component {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+.dot-semantic {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+.dot-primitive {
+  background: rgba(34, 197, 94, 0.5);
 }
 
 .token-map-empty {

@@ -236,7 +236,7 @@ const emailError = computed(() => {
 
 ## Token Mapping
 
-How Input tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Input tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Input" />
 

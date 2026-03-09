@@ -139,7 +139,7 @@ Navigation components for site structure and user orientation. All navigation me
 
 ## Token Mapping
 
-How tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Sidebar" />
 

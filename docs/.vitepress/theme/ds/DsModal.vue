@@ -9,15 +9,15 @@
         >
           <div
             ref="modalRef"
-            class="bg-zinc-900 border-0 md:border md:border-zinc-800 rounded-none md:rounded-lg shadow-2xl w-screen h-screen md:w-full md:max-w-2xl md:h-auto md:max-h-[90vh] flex flex-col"
+            class="bg-card border-0 md:border md:border-border rounded-none md:rounded-lg shadow-2xl w-screen h-screen md:w-full md:max-w-2xl md:h-auto md:max-h-[90vh] flex flex-col"
             role="dialog"
             aria-modal="true"
             :aria-labelledby="titleId"
             @click.stop
           >
             <!-- Header -->
-            <div class="flex items-center justify-between p-4 md:p-6 border-b border-zinc-800">
-              <h2 :id="titleId" class="text-base md:text-lg font-medium text-zinc-100">
+            <div class="flex items-center justify-between p-4 md:p-6 border-b border-border">
+              <h2 :id="titleId" class="text-base md:text-lg font-medium text-foreground">
                 {{ title }}
               </h2>
               <DsButton
@@ -38,7 +38,7 @@
             <!-- Footer -->
             <div
               v-if="$slots.footer"
-              class="p-4 md:p-6 border-t border-zinc-800 flex items-center justify-end gap-3"
+              class="p-4 md:p-6 border-t border-border flex items-center justify-end gap-3"
             >
               <slot name="footer" />
             </div>

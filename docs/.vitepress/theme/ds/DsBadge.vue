@@ -32,11 +32,11 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const variantClasses = {
-  default: 'bg-zinc-800 text-zinc-400 border-zinc-700/50',
-  info: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
-  success: 'bg-green-500/10 text-green-400 border-green-500/20',
-  warning: 'bg-orange-500/10 text-orange-400 border-orange-500/20',
-  error: 'bg-red-500/10 text-red-400 border-red-500/20',
+  default: 'bg-secondary text-muted-foreground border-border/50',
+  info: 'bg-info/10 text-info-foreground border-info/20',
+  success: 'bg-success/10 text-success-foreground border-success/20',
+  warning: 'bg-warning/10 text-warning-foreground border-warning/20',
+  error: 'bg-error/10 text-error-foreground border-error/20',
   purple: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
 };
 

@@ -1,11 +1,11 @@
 <template>
-  <div class="border border-zinc-800/60 rounded-lg overflow-hidden bg-zinc-900/20">
+  <div class="border border-border/60 rounded-lg overflow-hidden bg-card/20">
     <div class="overflow-x-auto">
       <table class="w-full min-w-[800px]" role="table">
         <caption v-if="caption" class="sr-only">{{ caption }}</caption>
 
         <thead role="rowgroup">
-          <tr class="bg-zinc-900/50 border-b border-zinc-800/60" role="row">
+          <tr class="bg-secondary/50 border-b border-border/60" role="row">
             <th
               v-if="selectable"
               class="px-4 py-2.5 text-left"
@@ -22,14 +22,14 @@
             <th
               v-for="column in columns"
               :key="column.key"
-              class="px-4 py-2.5 text-left text-xs font-medium text-zinc-500"
+              class="px-4 py-2.5 text-left text-xs font-medium text-muted-foreground"
               scope="col"
               role="columnheader"
             >
               <button
                 v-if="sortable && column.sortable !== false"
                 type="button"
-                class="flex items-center gap-2 hover:text-zinc-300 transition-colors"
+                class="flex items-center gap-2 hover:text-foreground transition-colors"
                 :aria-label="`Sort by ${column.label}`"
                 @click="$emit('sort', column.key)"
               >
@@ -45,7 +45,7 @@
           <tr
             v-for="(row, rowIndex) in data"
             :key="row.id"
-            class="border-b border-zinc-800/40 hover:bg-zinc-800/40 transition-colors"
+            class="border-b border-border/40 hover:bg-accent/40 transition-colors"
             role="row"
           >
             <td v-if="selectable" class="px-4 py-3" role="cell">
@@ -59,7 +59,7 @@
             <td
               v-for="column in columns"
               :key="column.key"
-              class="px-4 py-3 text-sm text-zinc-300"
+              class="px-4 py-3 text-sm text-foreground/80"
               role="cell"
             >
               <component

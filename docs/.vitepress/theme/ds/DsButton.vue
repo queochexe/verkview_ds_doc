@@ -54,13 +54,13 @@ defineEmits<{
   click: [event: MouseEvent];
 }>();
 
-const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-950 disabled:opacity-50 disabled:cursor-not-allowed';
+const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed';
 
 const variantClasses = {
-  primary: 'bg-zinc-100 text-zinc-950 hover:bg-white focus:ring-zinc-700 shadow-[0_0_15px_rgba(255,255,255,0.1)]',
-  secondary: 'bg-zinc-900 text-zinc-100 border border-zinc-800 hover:border-zinc-600 focus:ring-zinc-700',
-  ghost: 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/40 focus:ring-zinc-700',
-  icon: 'p-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 rounded-md focus:ring-zinc-700',
+  primary: 'bg-primary text-primary-foreground hover:bg-foreground focus:ring-ring shadow-[0_0_15px_rgba(255,255,255,0.1)]',
+  secondary: 'bg-secondary text-secondary-foreground border border-border hover:border-muted-foreground focus:ring-ring',
+  ghost: 'text-muted-foreground hover:text-foreground hover:bg-accent/40 focus:ring-ring',
+  icon: 'p-1.5 text-muted-foreground hover:text-foreground hover:bg-accent rounded-md focus:ring-ring',
 };
 
 const sizeClasses = {

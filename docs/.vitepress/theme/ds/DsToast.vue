@@ -5,12 +5,12 @@
       :class="toastClasses"
       role="alert"
     >
-      <component :is="icon" :class="`w-5 h-5 flex-shrink-0 ${iconColor}`" aria-hidden="true" />
-      <p class="text-sm text-zinc-200 flex-1">{{ message }}</p>
+      <component :is="iconComponent" :class="`w-5 h-5 flex-shrink-0 ${iconColor}`" aria-hidden="true" />
+      <p class="text-sm text-foreground flex-1">{{ message }}</p>
       <button
         v-if="dismissible"
         type="button"
-        class="text-zinc-500 hover:text-zinc-300 transition-colors"
+        class="text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Dismiss notification"
         @click="handleDismiss"
       >
@@ -47,32 +47,32 @@ let timer: number | null = null;
 const typeConfig = {
   info: {
     icon: Info,
-    borderClass: 'border-blue-500/20',
-    iconColor: 'text-blue-400',
+    borderClass: 'border-info/20',
+    iconColor: 'text-info',
   },
   success: {
     icon: CheckCircle,
-    borderClass: 'border-green-500/20',
-    iconColor: 'text-green-400',
+    borderClass: 'border-success/20',
+    iconColor: 'text-success',
   },
   warning: {
     icon: AlertTriangle,
-    borderClass: 'border-orange-500/20',
-    iconColor: 'text-orange-400',
+    borderClass: 'border-warning/20',
+    iconColor: 'text-warning',
   },
   error: {
     icon: AlertCircle,
-    borderClass: 'border-red-500/20',
-    iconColor: 'text-red-400',
+    borderClass: 'border-error/20',
+    iconColor: 'text-error',
   },
 };
 
 const config = computed(() => typeConfig[props.type]);
-const icon = computed(() => config.value.icon);
+const iconComponent = computed(() => config.value.icon);
 const iconColor = computed(() => config.value.iconColor);
 
 const toastClasses = computed(() => {
-  return `bg-zinc-900 border rounded-lg shadow-xl p-4 flex items-start gap-3 ${config.value.borderClass}`;
+  return `bg-card border rounded-lg shadow-xl p-4 flex items-start gap-3 ${config.value.borderClass}`;
 });
 
 const handleDismiss = () => {

@@ -1,23 +1,23 @@
 <template>
   <aside
     id="sidebar"
-    class="w-64 border-r border-zinc-800/60 flex-col bg-zinc-950 flex flex-shrink-0"
+    class="w-64 border-r border-border/60 flex-col bg-background flex flex-shrink-0"
     aria-label="Main navigation"
   >
     <!-- Workspace Switcher -->
-    <div class="h-14 flex items-center px-4 border-b border-zinc-800/60 flex-shrink-0">
+    <div class="h-14 flex items-center px-4 border-b border-border/60 flex-shrink-0">
       <button
-        class="flex items-center gap-3 text-zinc-100 hover:bg-zinc-800/40 py-1.5 px-2 rounded-lg w-full transition-colors duration-200 group"
+        class="flex items-center gap-3 text-foreground hover:bg-accent/40 py-1.5 px-2 rounded-lg w-full transition-colors duration-200 group"
         aria-label="Switch workspace"
         aria-expanded="false"
       >
         <div
-          class="w-5 h-5 bg-zinc-100 text-black rounded text-xs font-semibold flex items-center justify-center tracking-tighter shadow-sm group-hover:bg-white"
+          class="w-5 h-5 bg-primary text-primary-foreground rounded text-xs font-semibold flex items-center justify-center tracking-tighter shadow-sm group-hover:bg-foreground"
         >
           {{ workspace.initials }}
         </div>
         <span class="text-sm font-medium tracking-tight">{{ workspace.name }}</span>
-        <ChevronDown class="w-3.5 h-3.5 ml-auto text-zinc-500" aria-hidden="true" />
+        <ChevronDown class="w-3.5 h-3.5 ml-auto text-muted-foreground" aria-hidden="true" />
       </button>
     </div>
 
@@ -35,8 +35,8 @@
               :class="[
                 'flex items-center gap-2.5 px-2 py-1.5 rounded-md text-sm transition-all group',
                 item.active
-                  ? 'text-zinc-100 bg-zinc-800/40 shadow-sm ring-1 ring-white/5'
-                  : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/40',
+                  ? 'text-foreground bg-accent/40 shadow-sm ring-1 ring-white/5'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-accent/40',
               ]"
               :aria-current="item.active ? 'page' : undefined"
               @click="handleItemClick($event, item)"
@@ -45,14 +45,14 @@
                 :is="item.icon"
                 :class="[
                   'w-4 h-4',
-                  item.active ? 'text-blue-400' : 'text-zinc-500 group-hover:text-zinc-300',
+                  item.active ? 'text-info' : 'text-muted-foreground group-hover:text-foreground/80',
                 ]"
                 aria-hidden="true"
               />
               {{ item.label }}
               <span
                 v-if="item.badge"
-                class="ml-auto text-xs font-medium text-zinc-500"
+                class="ml-auto text-xs font-medium text-muted-foreground"
                 :aria-label="`${item.badge} items`"
               >
                 {{ item.badge }}
@@ -64,14 +64,14 @@
 
       <!-- Teams Section -->
       <div v-if="teams.length > 0">
-        <h3 class="px-2 text-xs font-medium text-zinc-500 mb-2 uppercase tracking-wider">
+        <h3 class="px-2 text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wider">
           Your Teams
         </h3>
         <ul class="space-y-0.5" role="list" aria-label="Teams">
           <li v-for="team in teams" :key="team.name" role="listitem">
             <a
               :href="team.href"
-              class="flex items-center gap-2.5 px-2 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/40 rounded-md text-sm transition-all group"
+              class="flex items-center gap-2.5 px-2 py-1.5 text-muted-foreground hover:text-foreground hover:bg-accent/40 rounded-md text-sm transition-all group"
             >
               <div
                 :class="`w-4 h-4 rounded flex items-center justify-center border bg-${team.color}-500/10 border-${team.color}-500/20`"
@@ -88,9 +88,9 @@
     </nav>
 
     <!-- Bottom Actions -->
-    <div v-if="user" class="p-3 border-t border-zinc-800/60 mt-auto">
+    <div v-if="user" class="p-3 border-t border-border/60 mt-auto">
       <button
-        class="flex items-center gap-2.5 px-2 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/40 rounded-md text-sm w-full transition-all text-left"
+        class="flex items-center gap-2.5 px-2 py-1.5 text-muted-foreground hover:text-foreground hover:bg-accent/40 rounded-md text-sm w-full transition-all text-left"
         aria-label="Help and support"
       >
         <HelpCircle class="w-4 h-4" aria-hidden="true" />
@@ -98,7 +98,7 @@
       </button>
 
       <button
-        class="mt-1 flex items-center gap-2.5 px-2 py-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/40 rounded-md text-sm w-full transition-all text-left"
+        class="mt-1 flex items-center gap-2.5 px-2 py-1.5 text-muted-foreground hover:text-foreground hover:bg-accent/40 rounded-md text-sm w-full transition-all text-left"
         :aria-label="`User account: ${user.name}`"
       >
         <div

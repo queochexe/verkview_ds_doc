@@ -173,7 +173,7 @@ const variant = getLabelVariant('#22c55e') // Returns 'success'
 
 ## Token Mapping
 
-How Badge tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Badge tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Badge" />
 

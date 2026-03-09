@@ -3,10 +3,10 @@
     <label
       v-if="label"
       :for="textareaId"
-      class="block text-sm font-medium text-zinc-300 mb-2"
+      class="block text-sm font-medium text-foreground/80 mb-2"
     >
       {{ label }}
-      <span v-if="required" class="text-red-400 ml-1" aria-label="required">*</span>
+      <span v-if="required" class="text-error ml-1" aria-label="required">*</span>
     </label>
 
     <textarea
@@ -26,7 +26,7 @@
     <p
       v-if="error"
       :id="errorId"
-      class="mt-2 text-xs text-red-400 flex items-center gap-1"
+      class="mt-2 text-xs text-error flex items-center gap-1"
       role="alert"
     >
       <AlertCircle class="w-3 h-3" aria-hidden="true" />
@@ -35,14 +35,14 @@
 
     <p
       v-else-if="success"
-      class="mt-2 text-xs text-green-400 flex items-center gap-1"
+      class="mt-2 text-xs text-success flex items-center gap-1"
       role="status"
     >
       <CheckCircle class="w-3 h-3" aria-hidden="true" />
       {{ success }}
     </p>
 
-    <p v-else-if="helpText" :id="helpId" class="mt-2 text-xs text-zinc-500">
+    <p v-else-if="helpText" :id="helpId" class="mt-2 text-xs text-muted-foreground">
       {{ helpText }}
     </p>
   </div>
@@ -79,12 +79,12 @@ const textareaId = computed(() => props.id || `textarea-${generateUniqueId()}`);
 const errorId = computed(() => `${textareaId.value}-error`);
 const helpId = computed(() => `${textareaId.value}-help`);
 
-const baseClasses = 'w-full bg-zinc-900 border text-zinc-200 rounded-lg px-4 py-2.5 text-sm transition-all duration-200 focus:outline-none focus:ring-1 disabled:opacity-50 disabled:cursor-not-allowed placeholder:text-zinc-600 resize-none';
+const baseClasses = 'w-full bg-secondary border text-foreground rounded-lg px-4 py-2.5 text-sm transition-all duration-200 focus:outline-none focus:ring-1 disabled:opacity-50 disabled:cursor-not-allowed placeholder:text-muted-foreground resize-none';
 
 const stateClasses = computed(() => {
-  if (props.error) return 'border-red-500 focus:border-red-500 focus:ring-red-500';
-  if (props.success) return 'border-green-500 focus:border-green-500 focus:ring-green-500';
-  return 'border-zinc-800 focus:border-zinc-700 focus:ring-zinc-700';
+  if (props.error) return 'border-error focus:border-error focus:ring-error';
+  if (props.success) return 'border-success focus:border-success focus:ring-success';
+  return 'border-border focus:border-ring focus:ring-ring';
 });
 
 const textareaClasses = computed(() => `${baseClasses} ${stateClasses.value}`);

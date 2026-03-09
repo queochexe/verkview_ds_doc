@@ -156,7 +156,7 @@ Card with shadow for prominent content.
 
 ## Token Mapping
 
-How Card tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Card tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Card" />
 

@@ -24,7 +24,7 @@ import { ArrowRight, Github } from 'lucide-vue-next'
         Explore Components
         <ArrowRight class="w-4 h-4" />
       </a>
-      <a href="https://github.com/verkview/design-system" class="btn-secondary" target="_blank">
+      <a href="https://github.com/queochexe/verkview_ds_doc" class="btn-secondary" target="_blank">
         <Github class="w-4 h-4" />
         View Code
       </a>

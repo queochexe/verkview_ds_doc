@@ -132,7 +132,7 @@ Disable Escape key closing:
 
 ## Token Mapping
 
-How Modal tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Modal tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Modal" />
 

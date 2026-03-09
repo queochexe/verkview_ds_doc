@@ -76,7 +76,7 @@ On mobile (< 640px), only the current page is shown:
 
 ## Token Mapping
 
-How Breadcrumbs tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Breadcrumbs tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Breadcrumbs" />
 

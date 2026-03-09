@@ -171,7 +171,7 @@ const description = ref('')
 
 ## Token Mapping
 
-How Textarea tokens flow through the three-layer system: **component** &larr; **semantic** &larr; **primitive**.
+How Textarea tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
 
 <TokenMap component="Textarea" />
 
