@@ -34,13 +34,19 @@ import { ArrowRight, Github } from 'lucide-vue-next'
 
 <style scoped>
 .hero-section {
-  @apply text-center py-12 md:py-16 px-4;
+  @apply text-center py-12 md:py-16 xl:py-20 px-4;
 }
 
 .hero-badge {
   @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  color: #15803d;
+}
+
+.dark .hero-badge {
   background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.3);
   color: #16a34a;
 }
 
@@ -53,6 +59,7 @@ import { ArrowRight, Github } from 'lucide-vue-next'
 .hero-title {
   @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight;
   color: var(--vp-c-text-1);
+  letter-spacing: -0.02em;
 }
 
 .gradient-text {
@@ -64,7 +71,7 @@ import { ArrowRight, Github } from 'lucide-vue-next'
 }
 
 .hero-description {
-  @apply text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed;
+  @apply text-base md:text-lg max-w-2xl xl:max-w-3xl mx-auto mb-8 leading-relaxed;
   color: var(--vp-c-text-2);
 }
 

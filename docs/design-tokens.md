@@ -189,8 +189,8 @@ Consistent corner radius values for different UI elements.
 .type-detail-card {
   padding: 1rem;
   border-radius: 0.75rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
 }
 
 .detail-label {
@@ -219,8 +219,8 @@ Consistent corner radius values for different UI elements.
   align-items: center;
   padding: 1rem;
   border-radius: 0.75rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
   min-width: 90px;
 }
 
@@ -298,5 +298,17 @@ Consistent corner radius values for different UI elements.
 
 .compliance-list strong {
   color: var(--vp-c-text-1);
+}
+
+/* Large viewport scaling */
+@media (min-width: 1280px) {
+  .status-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .radius-item {
+    flex: 1;
+    min-width: 0;
+  }
 }
 </style>

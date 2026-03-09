@@ -359,3 +359,25 @@
 .VPNavBarTitle .title {
   font-weight: 600;
 }
+
+/* ─── Large viewport layout scaling ─────────────────────────────── */
+
+/* Let the VitePress shell (navbar, sidebar) extend full-width */
+:root {
+  --vp-layout-max-width: 100%;
+}
+
+/* Widen the doc content area at large screens */
+@media (min-width: 1280px) {
+  .VPDoc:not(.has-sidebar) .content-container,
+  .VPDoc.has-sidebar .content-container {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .VPDoc:not(.has-sidebar) .content-container,
+  .VPDoc.has-sidebar .content-container {
+    max-width: 1104px !important;
+  }
+}

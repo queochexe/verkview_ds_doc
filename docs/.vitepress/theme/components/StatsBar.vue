@@ -24,9 +24,10 @@
 
 <style scoped>
 .stats-bar {
-  @apply grid grid-cols-2 md:grid-cols-4 gap-4 p-6 md:p-8 rounded-2xl mt-12;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(59, 130, 246, 0.08));
-  border: 1px solid rgba(139, 92, 246, 0.15);
+  @apply grid grid-cols-2 md:grid-cols-4 gap-4 p-6 md:p-8 rounded-2xl mt-12 mx-auto;
+  max-width: 960px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.06), rgba(37, 99, 235, 0.06));
+  border: 1px solid rgba(124, 58, 237, 0.12);
 }
 
 .stat-item {
@@ -40,9 +41,15 @@
 
 .stat-value.highlight {
   @apply text-xl md:text-2xl;
-  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .stat-value.highlight {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
   background-clip: text;
 }
 

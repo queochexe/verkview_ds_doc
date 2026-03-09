@@ -42,12 +42,12 @@ const iconColor = computed(() => {
   @apply p-6 rounded-xl;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-border);
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .feature-card:hover {
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-4px);
+  transform: translateY(-2px);
 }
 
 .icon-wrapper {

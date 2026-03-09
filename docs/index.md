@@ -50,6 +50,9 @@ title: Design System
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -67,17 +70,42 @@ title: Design System
   font-weight: 600;
   color: var(--vp-c-text-1);
   margin-bottom: 1rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .library-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
   .library-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large viewport scaling */
+@media (min-width: 1280px) {
+  .features-section {
+    margin-top: 3rem;
+  }
+
+  .features-grid {
+    gap: 1.5rem;
+  }
+
+  .component-library {
+    margin-top: 4rem;
+  }
+
+  .library-grid {
+    gap: 1rem;
   }
 }
 </style>

@@ -14,7 +14,7 @@ This is a **VitePress-powered documentation site** for the Verkview Vue 3 Design
 # Development
 npm run docs:dev          # Start dev server
 
-# Production build (currently has SSR issues)
+# Production build
 npm run docs:build        # Build for production
 npm run docs:preview      # Preview production build
 ```
@@ -48,13 +48,10 @@ docs/
 
 **Working:**
 - Dev server (`npm run docs:dev`)
+- Production build (`npm run docs:build`)
 - Homepage with visual hero, feature cards, component grid
 - Design Tokens page with color swatches, typography scale
 - Buttons page with interactive ButtonShowcase
-
-**Not Working:**
-- Production build fails with SSR error: `Cannot read properties of null (reading 'wrap')`
-- Issue is in one of: sidebar.md, table.md, toast.md, or breadcrumbs.md
 
 ## Key Files
 
