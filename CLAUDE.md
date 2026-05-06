@@ -86,4 +86,5 @@ See `project_context.md` for detailed conversation history and implementation no
 
 ---
 
-*Design System source: kanban_project/kanban-board/src/components/ds/*
+
+
