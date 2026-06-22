@@ -4,6 +4,11 @@
     role="status"
     :aria-label="ariaLabel"
   >
+    <span
+      v-if="dot"
+      :class="['rounded-full flex-shrink-0', dotSizeClass, dotColorClass, dotPulse ? 'animate-pulse' : '']"
+      aria-hidden="true"
+    />
     <component
       v-if="icon"
       :is="icon"
@@ -23,13 +28,25 @@ interface Props {
   icon?: any;
   ariaLabel?: string;
   className?: string;
+  dot?: 'green' | 'red' | 'blue' | 'gray';
+  dotPulse?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   variant: 'default',
   size: 'md',
   className: '',
+  dotPulse: false,
 });
+
+const dotColorClass = computed(() => ({
+  green: 'bg-green-500',
+  red: 'bg-red-500',
+  blue: 'bg-blue-500',
+  gray: 'bg-zinc-400',
+}[props.dot!] ?? ''))
+
+const dotSizeClass = computed(() => props.size === 'lg' ? 'w-2 h-2' : 'w-1.5 h-1.5')
 
 const variantClasses = {
   default: 'bg-secondary text-muted-foreground border-border/50',

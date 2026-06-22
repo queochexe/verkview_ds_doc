@@ -39,8 +39,16 @@ export default defineConfig({
             { text: 'Navigation', link: '/components/navigation' },
             { text: 'Cards', link: '/components/cards' },
             { text: 'Modals & Dialogs', link: '/components/modal' },
+            { text: 'Bottom Sheet', link: '/components/bottom-sheet' },
             { text: 'Avatars', link: '/components/avatars' },
-            { text: 'Icons', link: '/components/icons' }
+            { text: 'Icons', link: '/components/icons' },
+            { text: 'Spinner', link: '/components/spinner' },
+            { text: 'Progress Bar', link: '/components/progress-bar' },
+            { text: 'FAB', link: '/components/fab' },
+            { text: 'Filter Chip', link: '/components/filter-chip' },
+            { text: 'Timer Display', link: '/components/timer-display' },
+            { text: 'Project Band', link: '/components/project-band' },
+            { text: 'Calendar Event', link: '/components/calendar-event' }
           ]
         },
         {

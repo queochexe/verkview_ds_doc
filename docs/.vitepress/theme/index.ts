@@ -38,6 +38,14 @@ import DsTable from './ds/DsTable.vue'
 import DsSidebar from './ds/DsSidebar.vue'
 import DsToast from './ds/DsToast.vue'
 import DsBreadcrumbs from './ds/DsBreadcrumbs.vue'
+import DsSpinner from './ds/DsSpinner.vue'
+import DsProgressBar from './ds/DsProgressBar.vue'
+import DsFab from './ds/DsFab.vue'
+import DsFilterChip from './ds/DsFilterChip.vue'
+import DsTimerDisplay from './ds/DsTimerDisplay.vue'
+import DsProjectBand from './ds/DsProjectBand.vue'
+import DsCalendarEvent from './ds/DsCalendarEvent.vue'
+import DsBottomSheet from './ds/DsBottomSheet.vue'
 
 const theme: Theme = {
   extends: DefaultTheme,
@@ -77,6 +85,14 @@ const theme: Theme = {
     app.component('DsSidebar', DsSidebar)
     app.component('DsToast', DsToast)
     app.component('DsBreadcrumbs', DsBreadcrumbs)
+    app.component('DsSpinner', DsSpinner)
+    app.component('DsProgressBar', DsProgressBar)
+    app.component('DsFab', DsFab)
+    app.component('DsFilterChip', DsFilterChip)
+    app.component('DsTimerDisplay', DsTimerDisplay)
+    app.component('DsProjectBand', DsProjectBand)
+    app.component('DsCalendarEvent', DsCalendarEvent)
+    app.component('DsBottomSheet', DsBottomSheet)
   }
 }
 

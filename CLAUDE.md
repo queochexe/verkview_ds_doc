@@ -61,14 +61,14 @@ Source: `kanban_project/kanban-board/src/components/ds/` — 19 components total
 | `DsSidebar` | `docs/components/sidebar.md` | ✅ documented |
 | `DsToast` | `docs/components/toast.md` | ✅ documented |
 | `DsBreadcrumbs` | `docs/components/breadcrumbs.md` | ✅ documented |
-| `DsTimerDisplay` | `docs/components/timer-display.md` | ❌ needs page |
-| `DsFab` | `docs/components/fab.md` | ❌ needs page |
-| `DsFilterChip` | `docs/components/filter-chip.md` | ❌ needs page |
-| `DsProjectBand` | `docs/components/project-band.md` | ❌ needs page |
-| `DsCalendarEvent` | `docs/components/calendar-event.md` | ❌ needs page |
-| `DsBottomSheet` | `docs/components/bottom-sheet.md` | ❌ needs page |
-| `DsSpinner` | `docs/components/spinner.md` | ❌ needs page |
-| `DsProgressBar` | `docs/components/progress-bar.md` | ❌ needs page |
+| `DsTimerDisplay` | `docs/components/timer-display.md` | ✅ documented |
+| `DsFab` | `docs/components/fab.md` | ✅ documented |
+| `DsFilterChip` | `docs/components/filter-chip.md` | ✅ documented |
+| `DsProjectBand` | `docs/components/project-band.md` | ✅ documented |
+| `DsCalendarEvent` | `docs/components/calendar-event.md` | ✅ documented |
+| `DsBottomSheet` | `docs/components/bottom-sheet.md` | ✅ documented |
+| `DsSpinner` | `docs/components/spinner.md` | ✅ documented |
+| `DsProgressBar` | `docs/components/progress-bar.md` | ✅ documented |
 
 ### New components summary (added June 2026)
 

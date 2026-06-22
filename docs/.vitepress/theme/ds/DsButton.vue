@@ -33,7 +33,7 @@ import { computed } from 'vue';
 import { Loader2 } from 'lucide-vue-next';
 
 interface Props {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'icon';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'icon' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
   icon?: any;
@@ -61,6 +61,7 @@ const variantClasses = {
   secondary: 'bg-secondary text-secondary-foreground border border-border hover:border-muted-foreground focus:ring-ring',
   ghost: 'text-muted-foreground hover:text-foreground hover:bg-accent/40 focus:ring-ring',
   icon: 'p-1.5 text-muted-foreground hover:text-foreground hover:bg-accent rounded-md focus:ring-ring',
+  danger: 'bg-red-500/10 text-red-500 border border-red-500/20 hover:bg-red-500/20 focus:ring-red-500 dark:text-red-400 dark:border-red-400/20 dark:hover:bg-red-400/10',
 };
 
 const sizeClasses = {
@@ -76,7 +77,8 @@ const iconSizeClasses = {
 };
 
 const buttonClasses = computed(() => {
-  return `${baseClasses} ${variantClasses[props.variant]} ${props.variant !== 'icon' ? sizeClasses[props.size] : ''}`;
+  const skipSize = props.variant === 'icon'
+  return `${baseClasses} ${variantClasses[props.variant]} ${skipSize ? '' : sizeClasses[props.size]}`
 });
 
 const iconClasses = computed(() => {

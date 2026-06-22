@@ -34,6 +34,8 @@ import { DsBadge } from '@verkview/design-system'
 | `icon` | `Component` | `undefined` | Lucide icon component |
 | `ariaLabel` | `string` | `undefined` | Accessible label for screen readers |
 | `className` | `string` | `''` | Additional CSS classes |
+| `dot` | `'green' \| 'red' \| 'blue' \| 'gray'` | `undefined` | Colored status dot shown before the label |
+| `dotPulse` | `boolean` | `false` | Adds `animate-pulse` to the dot for live/active states |
 
 ## Variants
 
@@ -147,6 +149,38 @@ import { Check, Clock } from 'lucide-vue-next'
 
 <DsBadge variant="success" :icon="Check">Done</DsBadge>
 <DsBadge variant="warning" :icon="Clock">Pending</DsBadge>
+```
+
+## Status Dots
+
+Add a small colored dot before the badge label for live status indicators.
+
+<ComponentDemo title="Badge with Dot">
+  <DsBadge variant="success" dot="green">Online</DsBadge>
+  <DsBadge variant="error" dot="red">Offline</DsBadge>
+  <DsBadge variant="info" dot="blue">Syncing</DsBadge>
+  <DsBadge variant="default" dot="gray">Idle</DsBadge>
+</ComponentDemo>
+
+```vue
+<DsBadge variant="success" dot="green">Online</DsBadge>
+<DsBadge variant="error" dot="red">Offline</DsBadge>
+<DsBadge variant="info" dot="blue">Syncing</DsBadge>
+<DsBadge variant="default" dot="gray">Idle</DsBadge>
+```
+
+### Pulsing dot
+
+Use `dot-pulse` to animate the dot for live or actively-changing states:
+
+<ComponentDemo title="Pulsing Dot">
+  <DsBadge variant="success" dot="green" :dot-pulse="true">Live</DsBadge>
+  <DsBadge variant="error" dot="red" :dot-pulse="true">Error</DsBadge>
+</ComponentDemo>
+
+```vue
+<DsBadge variant="success" dot="green" :dot-pulse="true">Live</DsBadge>
+<DsBadge variant="error" dot="red" :dot-pulse="true">Recording</DsBadge>
 ```
 
 ## Color Mapping Utility

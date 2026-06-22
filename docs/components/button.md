@@ -8,6 +8,19 @@ Interactive elements for actions and navigation. All buttons meet WCAG 2.1 Level
 
 <ButtonShowcase />
 
+## Danger Variant
+
+Use `variant="danger"` for destructive actions. It uses an opacity-based red that works in both light and dark mode without a harsh solid-red background.
+
+<ComponentDemo title="Danger Button">
+  <DsButton variant="danger">Delete Task</DsButton>
+  <DsButton variant="danger" disabled>Delete (Disabled)</DsButton>
+</ComponentDemo>
+
+```vue
+<DsButton variant="danger" @click="deleteTask">Delete Task</DsButton>
+```
+
 ## Token Mapping
 
 How button tokens flow through the three-layer system: **value** &rarr; **primitive** &rarr; **semantic** &rarr; **component**.
