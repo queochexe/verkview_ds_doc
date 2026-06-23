@@ -1,12 +1,18 @@
 <template>
   <button
-    :class="fabClasses"
-    :style="variantStyle"
+    class="inline-flex items-center justify-center rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed"
+    :class="ringClass"
+    :style="buttonStyle"
     :aria-label="ariaLabel"
     :disabled="disabled"
     @click="$emit('click', $event)"
   >
-    <component v-if="icon" :is="icon" :class="iconClass" aria-hidden="true" />
+    <component
+      v-if="icon"
+      :is="icon"
+      :style="{ width: iconPx, height: iconPx, color: iconColor }"
+      aria-hidden="true"
+    />
     <slot v-else />
   </button>
 </template>
@@ -30,39 +36,25 @@ const props = withDefaults(defineProps<Props>(), {
 
 defineEmits<{ click: [event: MouseEvent] }>()
 
-const sizeClasses = {
-  sm: 'w-11 h-11',
-  md: 'w-14 h-14',
-  lg: 'w-16 h-16',
-}
+const diameter = computed(() => ({ sm: '44px', md: '56px', lg: '64px' }[props.size]))
+const iconPx   = computed(() => ({ sm: '16px', md: '20px', lg: '24px' }[props.size]))
 
-const iconSizes = {
-  sm: 'w-4 h-4',
-  md: 'w-5 h-5',
-  lg: 'w-6 h-6',
-}
-
-const variantBaseClasses = {
-  primary: 'text-white shadow-lg hover:brightness-110 active:brightness-95 focus:ring-blue-500',
-  surface: 'shadow-md hover:brightness-95 active:brightness-90 focus:ring-zinc-400 dark:focus:ring-zinc-500',
-}
-
-const variantStyle = computed(() => {
-  if (props.variant === 'primary') {
-    return { backgroundColor: '#3B82F6' }
-  }
-  return { backgroundColor: '#f4f4f5' }
-})
-
-const fabClasses = computed(() =>
-  [
-    'inline-flex items-center justify-center rounded-full transition-all duration-200',
-    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background',
-    'disabled:opacity-50 disabled:cursor-not-allowed',
-    variantBaseClasses[props.variant],
-    sizeClasses[props.size],
-  ].join(' ')
+const bgColor   = computed(() => props.variant === 'primary' ? '#3B82F6' : '#f4f4f5')
+const iconColor = computed(() => props.variant === 'primary' ? '#ffffff' : '#27272a')
+const shadow    = computed(() => props.variant === 'primary'
+  ? '0 4px 14px rgba(59,130,246,0.5)'
+  : '0 2px 8px rgba(0,0,0,0.15)'
 )
 
-const iconClass = computed(() => iconSizes[props.size])
+const buttonStyle = computed(() => ({
+  width: diameter.value,
+  height: diameter.value,
+  minWidth: diameter.value,
+  backgroundColor: bgColor.value,
+  boxShadow: shadow.value,
+}))
+
+const ringClass = computed(() =>
+  props.variant === 'primary' ? 'focus:ring-blue-500' : 'focus:ring-zinc-400'
+)
 </script>
