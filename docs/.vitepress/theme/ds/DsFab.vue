@@ -10,7 +10,7 @@
     <component
       v-if="icon"
       :is="icon"
-      :style="{ width: iconPx, height: iconPx, color: iconColor }"
+      :style="{ width: iconPx, height: iconPx, color: iconColor, display: 'block', flexShrink: 0 }"
       aria-hidden="true"
     />
     <slot v-else />
@@ -52,6 +52,9 @@ const buttonStyle = computed(() => ({
   minWidth: diameter.value,
   backgroundColor: bgColor.value,
   boxShadow: shadow.value,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 }))
 
 const ringClass = computed(() =>
